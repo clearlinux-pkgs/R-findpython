@@ -4,7 +4,7 @@
 #
 Name     : R-findpython
 Version  : 1.0.5
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/findpython_1.0.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/findpython_1.0.5.tar.gz
 Summary  : Functions to Find an Acceptable Python Binary
@@ -25,10 +25,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552183598
+export SOURCE_DATE_EPOCH=1552759185
 
 %install
-export SOURCE_DATE_EPOCH=1552183598
+export SOURCE_DATE_EPOCH=1552759185
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library findpython|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  findpython || :
 
 
 %files
@@ -91,3 +90,5 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/findpython/help/paths.rds
 /usr/lib64/R/library/findpython/html/00Index.html
 /usr/lib64/R/library/findpython/html/R.css
+/usr/lib64/R/library/findpython/tests/run-all.R
+/usr/lib64/R/library/findpython/tests/testthat/test-findpython.r
