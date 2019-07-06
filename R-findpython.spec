@@ -4,7 +4,7 @@
 #
 Name     : R-findpython
 Version  : 1.0.5
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/findpython_1.0.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/findpython_1.0.5.tar.gz
 Summary  : Functions to Find an Acceptable Python Binary
